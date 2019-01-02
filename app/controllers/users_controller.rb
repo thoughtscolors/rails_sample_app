@@ -9,4 +9,18 @@ class UsersController < ApplicationController
     # debugger
     # uses byebug gem, press Ctrl-D to step forward, acts as console /w breakpoints
   end
+
+  def create
+    @user = User.new(user_params)
+    if @user.save
+
+    else
+      render 'new'
+    end
+  end
+
+    private
+      def user_params
+        params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      end
 end
