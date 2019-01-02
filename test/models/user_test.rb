@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   def setup
-    @user = User.new(name: "User 1", email: "user1@user.com")
+    @user = User.new(name: "User 1", email: "user1@user.com", password: "secret", password_confirmation: "secret")
   end
 
   test 'user should be valid' do
