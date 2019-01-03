@@ -3,7 +3,12 @@ michael:
   name: Michael Example
   email: michael@example.com
   password_digest: <%= User.digest('password') %>
-  
+
+archer:
+  name: Sterling Archer
+  email: duchess@example.gov
+  password_digest: <%= User.digest('password') %>
+
 # these will cause uniqueness tests to fail when unique is set to true for email in db indexing
 # one:
 #   name: MyString
