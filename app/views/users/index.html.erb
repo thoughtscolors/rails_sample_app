@@ -4,12 +4,9 @@
 <%= will_paginate %>
 
 <ul class="users">
-  <% @users.each do |user| %>
-    <li>
-      <%= gravatar_for user, size: 50 %>
-      <%= link_to user.name, user %>
-    </li>
-  <% end %>
+     <!-- this automagically knows that @users is an array of user objects
+     and we are looking to render the 'user' partial as a list??!?  -->
+    <%= render @users %>
 </ul>
 
 <%= will_paginate %>
