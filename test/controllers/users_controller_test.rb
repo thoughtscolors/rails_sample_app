@@ -54,7 +54,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
                                     user: { password:              'password',
                                             password_confirmation: 'password',
                                             admin: true } }
-                                            pp User.find(@other_user[:id])
+
     assert_not @other_user.reload.admin?
   end
 
