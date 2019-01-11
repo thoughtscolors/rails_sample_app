@@ -7,6 +7,7 @@ class MicropostsController < ApplicationController
       flash[:success] = "Post created!"
       redirect_to root_url
     else
+      @feed_items = [] #makes feed go away on empty submission but doesn't break
       render 'static_pages/home'
     end
   end
